@@ -84,3 +84,8 @@ ul {
 .hr {
     border-bottom: 1px solid gray;
 }
+
+#rootTop {
+    text-align: center;
+    justify-content: center;
+}
