@@ -1,5 +1,5 @@
 :root {
-    --mainBackgroundColor: #1E1E2F;
+    --mainBackgroundColor: #f0ead5;
     --mainButtonColor: #00ADB5;
 }
 
@@ -18,7 +18,7 @@ body {
 
 body {
     background-color: var(--mainBackgroundColor);
-    color: #ffffff;
+    color: #00235a;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: scroll;
@@ -48,7 +48,7 @@ button:hover {
 
 a{
     text-decoration: none;
-    color: #ff9f0f;
+    color: #ff0080;
     font-weight: bold;
 }
 
@@ -81,12 +81,44 @@ ul {
     list-style: none;
 }
 
-.hr {
-    border-bottom: 1px solid gray;
-}
-
 #rootTop {
     text-align: center;
     justify-content: center;
+    border-bottom: 2px solid gray;
+    padding: 3em 0;
+}
+
+#mainTop {
+    text-align: center;
+    justify-content: center;
+    border-bottom: 2px solid gray;
+    padding: 2em 0;
+}
+
+.mainLink {
+    text-align: center;
+    margin-top: 8%;
+}
+
+.navItems {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 24%;
     border-bottom: 1px solid gray;
+}
+.navItem {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    padding: 2px 4px;
+    border: 1px solid white;
+}
+
+.secondTitle {
+    margin-top: 1%;
+}
+
+.middleArea {
+    padding: 10em 0;
+    text-align: center;
 }
