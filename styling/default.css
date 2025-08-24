@@ -80,3 +80,7 @@ textarea:focus {
 ul {
     list-style: none;
 }
+
+.hr {
+    border-bottom: 1px solid gray;
+}
