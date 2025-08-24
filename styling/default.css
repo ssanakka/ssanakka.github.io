@@ -76,3 +76,7 @@ textarea:focus {
     height: 100%;
     display: flex;
 }
+
+ul {
+    list-style: none;
+}
