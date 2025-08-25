@@ -176,3 +176,7 @@ ul {
     max-width: 300px;
     max-height: 380px;
 }
+
+.contractInfo{
+    padding: 0 24%;
+}
