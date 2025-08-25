@@ -155,3 +155,24 @@ ul {
     text-align: center;
     margin-top: 1rem;
 }
+
+
+.aboutMeSection h3 {
+    text-align: center;
+    margin-top: 4%;
+}
+.aboutMeSection p {
+    margin-top: 1%;
+    padding: 0 30%;
+}
+.aboutMeSection figcaption {
+    text-align: center;
+}
+.aboutMeSection img {
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    max-width: 300px;
+    max-height: 380px;
+}
