@@ -3,17 +3,14 @@
     --mainButtonColor: #00ADB5;
 }
 
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: 'Gill Sans', sans-serif;
-}
-
 html,
 body {
+    padding: 0px;
+    margin: 0px;
     height: 100%;
     scrollbar-width: none;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', sans-serif;
 }
 
 body {
@@ -56,22 +53,6 @@ a:hover {
     color: #008E91;
 }
 
-input {
-    outline: none;
-}
-
-input:focus {
-    outline: none;
-}
-
-textarea {
-    outline: none;
-}
-
-textarea:focus {
-    outline: none;
-}
-
 .container {
     height: 100%;
     display: flex;
@@ -92,7 +73,7 @@ ul {
     text-align: center;
     justify-content: center;
     border-bottom: 2px solid gray;
-    padding: 2em 0;
+    padding: 1.4% 0;
 }
 
 .mainLink {
@@ -106,15 +87,16 @@ ul {
     border-bottom: 1px solid gray;
     white-space: nowrap;
     text-align: center;
-    padding: .8rem 0;
+    margin: 0;
+    padding: 1.4% 0;
 }
 .navItem:nth-child(odd) {
     display: inline-block;
     width: auto;
-    margin: 10px 28px;
+    margin: 0px 28px;
 }
 .navItem:nth-child(even) {
-    margin: 10px 0;
+    margin: 0px 0;
     width: 8px;
 }
 
@@ -144,7 +126,7 @@ ul {
 }
 
 .middleArea {
-    padding: 12% 0;
+    padding: 11% 0;
     text-align: center;
 }
 .middleArea p {
