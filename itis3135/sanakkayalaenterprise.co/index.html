@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Homepage">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ITIS3135 | Sumanth Sanakkayala's | Simple Seal | Home</title>
+        <script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
+        <!-- https://coolors.co/5aa9e6-7fc8f8-f9f9f9-ffe45e-ff6392 -->
+        <style>
+        :root {
+            --mainBackgroundColor: #ffe45e;
+            --mainButtonColor: #00ADB5;
+        }
+
+        html,
+        body {
+            padding: 0px;
+            margin: 0px;
+            height: 100%;
+            scrollbar-width: none;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--mainBackgroundColor);
+            color: #00235a;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overflow-y: scroll;
+        }
+
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        button {
+            border: none;
+            background-color: var(--mainButtonColor);
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 4px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            color: #008E91;
+        }
+
+        a{
+            text-decoration: none;
+            color: #ff6392;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #008E91;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #rootTop {
+            text-align: center;
+            justify-content: center;
+            border-bottom: 2px solid gray;
+            padding: 3em 0;
+        }
+
+        #mainTop {
+            text-align: center;
+            justify-content: center;
+            border-bottom: 2px solid gray;
+            padding: 1.4% 0;
+        }
+
+        .mainLink {
+            text-align: center;
+            margin-top: 8%;
+        }
+
+        .navItems {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid gray;
+            white-space: nowrap;
+            text-align: center;
+            margin: 0;
+            padding: 1.4% 0;
+        }
+        .navItem:nth-child(odd) {
+            display: inline-block;
+            width: auto;
+            margin: 0px 28px;
+        }
+        .navItem:nth-child(even) {
+            margin: 0px 0;
+            width: 8px;
+        }
+
+        .footerItems {
+            padding: .8rem 0;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid gray;
+            border-top: 1px solid gray;
+            text-align: center;
+            white-space: nowrap;
+            flex-wrap: wrap;
+        }
+        .footerItem:nth-child(odd){
+            display: inline-block;
+            width: auto;
+            margin: 6px 0;
+        }
+        .footerItem:nth-child(even){
+            width: 2px;
+            margin: 6px 8px;
+        }
+
+        .secondTitle {
+            margin-top: 1%;
+        }
+
+        .middleArea {
+            padding: 11% 0;
+            text-align: center;
+            background-color: #ff6392;
+            border-radius: 20px;
+        }
+        .middleArea p {
+            margin-top: .6rem;
+        }
+        .middleArea ul{
+            margin: 0;
+            padding: 0;
+        }
+        .middleArea li{
+            padding-top: 4px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+
+        .enterpriseItem img{
+            margin-top: 29px;
+            margin-right: 14px;
+        }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div id="mainTop" class="container">
+                <div class="enterpriseItem"><img alt="icon" width=20 height=20 src="../../images/icon.svg"></div>
+                <div class="enterpriseItem"><h1>Sanakkayala Enterprise</h1></div>
+            </div>
+            <nav>
+                <ul class="navItems">
+                    <li class="navItem"><a href="">Home</a></li>
+                    <li class="navItem">|</li>
+                    <li class="navItem"><a href="./introduction.html">Introduction</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+
+        <div class="middleArea">
+            <h2>Sumanth's Services</h2>
+            <p>My company does very cool things.</p>
+            <ul>
+                <li>We have money</li>
+                <li>We are cool</li>
+                <li>We eat food</li>
+                <li>We have food</li>
+                <li>We like food</li>
+            </ul>
+            <p>We can help clients with obtaining food, using money, and eating food. Contact us at a@gmail.com or 000-000-0000.
+                You can also visit us at our office on 000 A road.
+            </p>
+        </div>
+        
+
+    
+        <footer class="footer">
+            <nav>
+                <ul class="footerItems">
+                    <li class="footerItem"><a href="https://github.com/ssanakka" target="_blank">GitHub.com</a></li>
+                    <li class="footerItem">|</li>
+                    <li class="footerItem"><a href="https://www.linkedin.com/in/sumanthsanakkayala" target="_blank">Linkedin</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">&copy; All Rights Reserved</p>
+            <!-- <div data-include="../components/footer.html"></div> -->
+        </footer>
+    </body>
+</html>
