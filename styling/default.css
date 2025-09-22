@@ -100,7 +100,7 @@ ul {
     width: 8px;
 }
 
-.footerItems {
+.footer-items {
     padding: .8rem 0;
     max-width: 100%;
     display: flex;
@@ -111,12 +111,12 @@ ul {
     white-space: nowrap;
     flex-wrap: wrap;
 }
-.footerItem:nth-child(odd){
+.footer-item:nth-child(odd){
     display: inline-block;
     width: auto;
     margin: 6px 0;
 }
-.footerItem:nth-child(even){
+.footer-item:nth-child(even){
     width: 2px;
     margin: 6px 8px;
 }
