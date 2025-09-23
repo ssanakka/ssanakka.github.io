@@ -81,7 +81,7 @@ ul {
     margin-top: 8%;
 }
 
-.navItems {
+.nav-items {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid gray;
@@ -90,12 +90,12 @@ ul {
     margin: 0;
     padding: 1.4% 0;
 }
-.navItem:nth-child(odd) {
+.nav-item:nth-child(odd) {
     display: inline-block;
     width: auto;
     margin: 0px 28px;
 }
-.navItem:nth-child(even) {
+.nav-item:nth-child(even) {
     margin: 0px 0;
     width: 8px;
 }
