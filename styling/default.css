@@ -201,7 +201,6 @@ ul {
     line-height: 1.5;
 }
 
-/* Mobile responsive for evaluations page only */
 @media (max-width: 768px) {
     .evaluations-main {
         padding: 20px;
@@ -209,4 +208,6 @@ ul {
     
     .evaluation-section {
         padding: 20px;
-        margin-bottom: 30
+        margin-bottom: 30;
+    }
+}
