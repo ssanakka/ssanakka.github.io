@@ -278,3 +278,70 @@ main, .middleArea {
         padding: 0 10%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+/*css for fcc javascript*/
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--mainButtonColor);
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(0, 173, 182, 0.1);
+}
+
+.schedule-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+.schedule-section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00235a;
+}
+
+/* Mobile responsiveness for tables */
+@media screen and (max-width: 600px) {
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    .schedule-section {
+        padding: 1rem;
+    }
+}
