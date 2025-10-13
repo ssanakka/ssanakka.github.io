@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Gardening - Green Thumb Adventures</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f9f9f9;
+            background-image: linear-gradient(to bottom, #e8f5e9, #f1f8e9);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .nav-divider {
+            color: #a5d6a7;
+            font-weight: bold;
+        }
+        
+        /* Main Content Styles */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            display: none;
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #c8e6c9;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: #388e3c;
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Figure Styles */
+        figure {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        figcaption {
+            font-style: italic;
+            margin-top: 0.5rem;
+            color: #555;
+        }
+        
+        .ai-prompt {
+            font-style: italic;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Form Styles */
+        form {
+            background-color: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        button {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #1b5e20;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .validation-links {
+            margin: 1rem 0;
+        }
+        
+        .validation-links a {
+            color: #a5d6a7;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        
+        .validation-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .design-firm {
+            margin-top: 1rem;
+        }
+        
+        .design-firm a {
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            main {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Urban Gardening</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" data-section="what">What</a></li>
+                    <li><span class="nav-divider">✦</span></li>
+                    <li><a href="#" data-section="who">Who</a></li>
+                    <li><span class="nav-divider">✦</span></li>
+                    <li><a href="#" data-section="when">When</a></li>
+                    <li><span class="nav-divider">✦</span></li>
+                    <li><a href="#" data-section="where">Where</a></li>
+                    <li><span class="nav-divider">✦</span></li>
+                    <li><a href="#" data-section="how">How</a></li>
+                    <li><span class="nav-divider">✦</span></li>
+                    <li><a href="#" data-section="why">Why</a></li>
+                    <li><span class="nav-divider">✦</span></li>
+                    <li><a href="#" data-section="ai-prompts">AI Prompts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- What Section -->
+        <section id="what" class="active">
+            <h2>What is Urban Gardening?</h2>
+            <p>Urban gardening is the practice of cultivating plants in an urban environment. It transforms underutilized spaces like balconies, rooftops, and small yards into productive green areas that provide fresh produce, beautify neighborhoods, and create community connections.</p>
+            
+            <p>This hobby has gained tremendous popularity in recent years as people seek more sustainable lifestyles and ways to reconnect with nature despite living in cities. Urban gardens range from simple container setups to sophisticated vertical farming systems.</p>
+            
+            <figure>
+                <img src="https://placehold.co/800x400/4caf50/white?text=Balcony+Garden+Setup" alt="A thriving balcony garden with various plants in containers">
+                <figcaption>A well-designed balcony garden demonstrating space-efficient planting</figcaption>
+                <p class="ai-prompt">AI Prompt: "Create a photorealistic image of a lush balcony garden in an urban setting with various plants in containers, showing efficient use of space"</p>
+            </figure>
+            
+            <h3>Types of Urban Gardens</h3>
+            <ul>
+                <li><strong>Container Gardens:</strong> Using pots, planters, and other containers to grow plants on patios, balconies, or rooftops</li>
+                <li><strong>Vertical Gardens:</strong> Growing plants upward on walls or specially designed structures to maximize limited space</li>
+                <li><strong>Community Gardens:</strong> Shared spaces where multiple people cultivate individual plots within a larger garden area</li>
+                <li><strong>Window Farms:</strong> Hydroponic systems installed in windows to grow herbs and small vegetables indoors</li>
+            </ul>
+        </section>
+
+        <!-- Who Section -->
+        <section id="who">
+            <h2>Who Can Be an Urban Gardener?</h2>
+            <p>Urban gardening is an inclusive hobby that welcomes people from all walks of life. Whether you're a busy professional, a retiree, a student, or a family with children, there's a way for you to participate in urban agriculture.</p>
+            
+            <p>I started urban gardening five years ago when I moved to an apartment with a small balcony. What began with a few herb pots has evolved into a productive mini-farm that supplies about 20% of my vegetable consumption during peak season.</p>
+            
+            <figure>
+                <img src="https://placehold.co/600x400/4caf50/white?text=Urban+Gardener+at+Work" alt="A person tending to plants on an apartment balcony">
+                <figcaption>An urban gardener harvesting fresh herbs from their balcony garden</figcaption>
+                <p class="ai-prompt">AI Prompt: "Generate a photorealistic image of a diverse group of people of different ages tending to plants in an urban garden setting"</p>
+            </figure>
+            
+            <h3>Getting Started Survey</h3>
+            <form>
+                <div class="form-group">
+                    <label for="experience">What is your gardening experience level?</label>
+                    <select id="experience" name="experience">
+                        <option value="beginner">Complete Beginner</option>
+                        <option value="some">Some Experience</option>
+                        <option value="intermediate">Intermediate Gardener</option>
+                        <option value="expert">Expert Gardener</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="space">What type of space do you have available?</label>
+                    <select id="space" name="space">
+                        <option value="windowsill">Windowsill Only</option>
+                        <option value="balcony">Balcony/Patio</option>
+                        <option value="small-yard">Small Yard</option>
+                        <option value="rooftop">Rooftop Access</option>
+                        <option value="community">Community Garden Plot</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interest">What interests you most about urban gardening?</label>
+                    <textarea id="interest" name="interest" rows="3" placeholder="Share what draws you to this hobby..."></textarea>
+                </div>
+                
+                <button type="submit">Get Personalized Tips</button>
+            </form>
+        </section>
+
+        <!-- When Section -->
+        <section id="when">
+            <h2>When to Garden in the City</h2>
+            <p>Timing is crucial in urban gardening. Unlike rural gardening with expansive spaces, urban gardens often have microclimates created by buildings, pavement, and limited soil volume that affect planting schedules.</p>
+            
+            <p>In most temperate climates, the gardening season extends from early spring through late fall, with some crops like kale and carrots potentially overwintering. Indoor gardening with grow lights can extend the season year-round.</p>
+            
+            <figure>
+                <img src="https://placehold.co/700x400/4caf50/white?text=Seasonal+Planting+Guide" alt="A visual guide showing what to plant each season">
+                <figcaption>Seasonal planting guide for urban gardeners in temperate climates</figcaption>
+                <p class="ai-prompt">AI Prompt: "Create an infographic-style image showing what vegetables to plant in spring, summer, and fall in an urban garden setting"</p>
+            </figure>
+            
+            <h3>Monthly Gardening Tasks</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Indoor Tasks</th>
+                        <th>Outdoor Tasks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>Plan garden, order seeds, start onions/leeks indoors</td>
+                        <td>Clean tools, build new containers</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>Start peppers, tomatoes, and broccoli indoors</td>
+                        <td>Prepare soil in covered areas</td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>Start most vegetables and flowers indoors</td>
+                        <td>Plant peas, spinach, and lettuce outdoors</td>
+                    </tr>
+                    <tr>
+                        <td>April</td>
+                        <td>Start warm-season crops indoors</td>
+                        <td>Transplant cool-weather crops, direct sow root vegetables</td>
+                    </tr>
+                    <tr>
+                        <td>May</td>
+                        <td>Start succession crops indoors</td>
+                        <td>Transplant tomatoes, peppers; plant beans, corn</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Best Times for Common Urban Crops</h3>
+            <ul>
+                <li><strong>Leafy Greens:</strong> Early spring and fall (cool seasons)</li>
+                <li><strong>Tomatoes & Peppers:</strong> After last frost date through summer</li>
+                <li><strong>Root Vegetables:</strong> Spring and late summer for fall harvest</li>
+                <li><strong>Herbs:</strong> Spring through fall (many are perennial)</li>
+            </ul>
+        </section>
+
+        <!-- Where Section -->
+        <section id="where">
+            <h2>Where to Create Your Urban Garden</h2>
+            <p>Urban gardens can thrive in surprisingly small spaces. The key is identifying areas that receive adequate sunlight (typically 6+ hours daily for vegetables) and have access to water.</p>
+            
+            <p>My first garden was on a fire escape in Brooklyn - not technically legal, but it produced an amazing amount of food! Now I have a more proper balcony garden with vertical elements to maximize production.</p>
+            
+            <figure>
+                <img src="https://placehold.co/800x400/4caf50/white?text=Vertical+Garden+Wall" alt="A vertical garden wall with various plants">
+                <figcaption>A space-efficient vertical garden utilizing wall space</figcaption>
+                <p class="ai-prompt">AI Prompt: "Generate a photorealistic image of an innovative vertical garden system on an urban balcony with various edible plants"</p>
+            </figure>
+            
+            <h3>Potential Urban Garden Locations</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Balcony/Patio</td>
+                        <td>Private, convenient access</td>
+                        <td>Limited space, weight restrictions</td>
+                        <td>Containers, vertical gardens</td>
+                    </tr>
+                    <tr>
+                        <td>Rooftop</td>
+                        <td>Maximum sunlight, often spacious</td>
+                        <td>Access issues, extreme conditions</td>
+                        <td>Large containers, raised beds</td>
+                    </tr>
+                    <tr>
+                        <td>Windowsill</td>
+                        <td>Easiest access, protected</td>
+                        <td>Very limited space</td>
+                        <td>Herbs, microgreens</td>
+                    </tr>
+                    <tr>
+                        <td>Community Garden</td>
+                        <td>More space, community support</td>
+                        <td>Travel required, shared resources</td>
+                        <td>All garden types</td>
+                    </tr>
+                    <tr>
+                        <td>Indoor with Lights</td>
+                        <td>Year-round growing</td>
+                        <td>Energy costs, limited crop types</td>
+                        <td>Herbs, leafy greens, starters</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- How Section -->
+        <section id="how">
+            <h2>How to Start Your Urban Garden</h2>
+            <p>Beginning an urban garden might seem daunting, but following a systematic approach makes the process manageable and rewarding. Start small, learn as you go, and expand gradually.</p>
+            
+            <p>My first season, I focused on just three easy crops: basil, cherry tomatoes, and lettuce. This limited focus helped me learn the basics without becoming overwhelmed.</p>
+            
+            <figure>
+                <img src="https://placehold.co/700x500/4caf50/white?text=Container+Garden+Setup" alt="Step-by-step container garden setup">
+                <figcaption>Step-by-step guide to setting up a container garden</figcaption>
+                <p class="ai-prompt">AI Prompt: "Create a series of images showing the step-by-step process of setting up a container garden on a balcony from empty space to planted containers"</p>
+            </figure>
+            
+            <h3>Step-by-Step Beginner's Guide</h3>
+            <ol>
+                <li><strong>Assess Your Space:</strong> Note sunlight patterns, available space, and water access</li>
+                <li><strong>Choose Appropriate Containers:</strong> Ensure proper drainage and adequate size for plant roots</li>
+                <li><strong>Select Quality Soil:</strong> Use potting mix specifically for containers, not garden soil</li>
+                <li><strong>Pick Beginner-Friendly Plants:</strong> Start with herbs, lettuce, radishes, or cherry tomatoes</li>
+                <li><strong>Plant Properly:</strong> Follow spacing guidelines and planting depths for each crop</li>
+                <li><strong>Establish a Watering Routine:</strong> Containers dry out faster than in-ground gardens</li>
+                <li><strong>Monitor and Adjust:</strong> Watch for pests, nutrient deficiencies, and adjust care as needed</li>
+            </ol>
+            
+            <h3>Essential Urban Gardening Supplies</h3>
+            <ul>
+                <li>Containers with drainage holes (pots, grow bags, window boxes)</li>
+                <li>Quality potting mix (not soil from the ground)</li>
+                <li>Organic fertilizer or compost</li>
+                <li>Watering can or hose with spray attachment</li>
+                <li>Hand trowel and pruning shears</li>
+                <li>Plant labels and permanent marker</li>
+                <li>Gardening gloves</li>
+            </ul>
+        </section>
+
+        <!-- Why Section -->
+        <section id="why">
+            <h2>Why Urban Gardening Matters</h2>
+            <p>Urban gardening offers numerous benefits that extend beyond simply growing food. It addresses multiple modern challenges from food security to mental health in our increasingly urbanized world.</p>
+            
+            <p>Studies have shown that gardening can reduce stress, improve mood, and provide moderate physical activity. The satisfaction of harvesting food you've grown yourself is incredibly rewarding.</p>
+            
+            <figure>
+                <img src="https://placehold.co/800x400/4caf50/white?text=Community+Garden+Gathering" alt="People gathering in a community garden">
+                <figcaption>Community gardens foster social connections and neighborhood resilience</figcaption>
+                <p class="ai-prompt">AI Prompt: "Generate a photorealistic image of a diverse group of people interacting happily in a thriving community garden in an urban setting"</p>
+            </figure>
+            
+            <h3>Benefits of Urban Gardening</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Benefit Category</th>
+                        <th>Specific Benefits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Personal Health</td>
+                        <td>Fresh, nutritious produce; physical activity; stress reduction; mental wellbeing</td>
+                    </tr>
+                    <tr>
+                        <td>Environmental</td>
+                        <td>Reduced food miles; improved air quality; urban cooling; increased biodiversity</td>
+                    </tr>
+                    <tr>
+                        <td>Community</td>
+                        <td>Neighborhood beautification; social connections; knowledge sharing; food security</td>
+                    </tr>
+                    <tr>
+                        <td>Economic</td>
+                        <td>Reduced grocery bills; potential income from surplus; increased property values</td>
+                    </tr>
+                    <tr>
+                        <td>Educational</td>
+                        <td>Hands-on learning for all ages; understanding food systems; developing patience</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>My Personal Why</h3>
+            <p>I started urban gardening during a particularly stressful period in my life. The daily ritual of checking on my plants, watering them, and watching them grow became a form of meditation. The first time I made a salad entirely from my balcony garden, I felt a profound connection to my food that I'd never experienced buying from supermarkets.</p>
+            
+            <p>Beyond the personal benefits, I love that my small garden contributes to neighborhood greening and provides habitat for pollinators in the concrete jungle. It's my small act of rebellion against sterile urban environments.</p>
+        </section>
+
+        <!-- AI Prompts Section -->
+        <section id="ai-prompts">
+            <h2>AI Prompts Used</h2>
+            <p>For this project, I used AI assistance primarily for generating placeholder images and refining content. Below are the specific prompts used with ChatGPT-4 to create various elements of this site.</p>
+            
+            <h3>Image Generation Prompts</h3>
+            <ul>
+                <li>"Create a photorealistic image of a lush balcony garden in an urban setting with various plants in containers, showing efficient use of space"</li>
+                <li>"Generate a photorealistic image of a diverse group of people of different ages tending to plants in an urban garden setting"</li>
+                <li>"Create an infographic-style image showing what vegetables to plant in spring, summer, and fall in an urban garden setting"</li>
+                <li>"Generate a photorealistic image of an innovative vertical garden system on an urban balcony with various edible plants"</li>
+                <li>"Create a series of images showing the step-by-step process of setting up a container garden on a balcony from empty space to planted containers"</li>
+                <li>"Generate a photorealistic image of a diverse group of people interacting happily in a thriving community garden in an urban setting"</li>
+            </ul>
+            
+            <h3>Content Development Prompts</h3>
+            <ul>
+                <li>"Help me create engaging content about urban gardening for a hobby website, covering the what, who, when, where, how, and why aspects"</li>
+                <li>"Suggest a monthly gardening task calendar for urban gardeners in temperate climates"</li>
+                <li>"What are the pros and cons of different urban garden locations like balconies, rooftops, and community gardens?"</li>
+                <li>"Create a step-by-step beginner's guide to starting an urban garden"</li>
+                <li>"What are the key benefits of urban gardening, categorized by personal, environmental, community, economic, and educational impacts?"</li>
+            </ul>
+            
+            <h3>Technical Implementation Prompts</h3>
+            <ul>
+                <li>"Create CSS for a single-page application style navigation where clicking links shows/hides different sections"</li>
+                <li>"Write JavaScript to handle section switching in a single-page hobby website"</li>
+                <li>"Suggest a color scheme for a gardening website that's different from typical corporate blues"</li>
+                <li>"How can I make sure my HTML structure follows accessibility guidelines while implementing a single-page section switching system?"</li>
+            </ul>
+            
+            <p><strong>Note:</strong> All code was written by me with AI assistance for troubleshooting and refinement. The content was developed through a collaborative process with AI providing suggestions that I then customized and expanded upon.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="validation-links">
+                <a href="https://validator.w3.org/check?uri=referer" target="_blank">HTML Validation</a> |
+                <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS Validation</a> |
+                <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/username/itis3135/hobby/" target="_blank">Accessibility Check</a>
+            </div>
+            <p class="design-firm">Designed by <a href="../design-firm.html">Green Thumb Web Designs</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for section switching
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('nav a');
+            
+            // Add click event listeners to each navigation link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the target section ID from the data attribute
+                    const targetSection = this.getAttribute('data-section');
+                    
+                    // Hide all sections
+                    document.querySelectorAll('section').forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    
+                    // Show the target section
+                    document.getElementById(targetSection).classList.add('active');
+                });
+            });
+            
+            // Ensure the "What" section is active by default
+            document.getElementById('what').classList.add('active');
+        });
+    </script>
+</body>
+</html>
