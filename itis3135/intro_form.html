@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Introduction Form">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styling/default.css?v=0.05">
+    <title>Introduction Form</title>
+    <script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
+    <style>
+        .form-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        
+        .required::after {
+            content: " *";
+            color: red;
+        }
+        
+        .course-entry {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        .course-entry input {
+            flex: 1;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        button[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        button[type="clear"] {
+            background-color: #2196F3;
+            color: white;
+        }
+        
+        .add-course-btn {
+            background-color: #FF9800;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .delete-course-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 5px 10px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .result-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .reset-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #2196F3;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="rootTop">
+            <h1>Introduction Form</h1>
+        </div>
+        <div data-include="../components/header.html"></div>
+    </header>
+
+    <div class="form-section" id="form-section">
+        <h3>Please submit the form below.</h3>
+        <form id="introduction-form">
+            <div class="form-group">
+                <label for="firstName" class="required">First Name</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name" value="Sumanth">
+            </div>
+            
+            <div class="form-group">
+                <label for="middleName">Middle Name (or Initial)</label>
+                <input type="text" id="middleName" name="middleName" placeholder="Enter your middle name (optional)">
+            </div>
+            
+            <div class="form-group">
+                <label for="nickname">Nickname/Preferred Name</label>
+                <input type="text" id="nickname" name="nickname" placeholder="Enter your nickname (optional)">
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName" class="required">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name" value="Sumanth">
+            </div>
+            
+            <div class="form-group">
+                <label for="acknowledgment" class="required">Acknowledgment Statement</label>
+                <input type="text" id="acknowledgment" name="acknowledgment" required placeholder="Enter acknowledgment statement" value="I understand that this is a class assignment.">
+            </div>
+            
+            <div class="form-group">
+                <label for="acknowledgmentDate" class="required">Acknowledgement Date</label>
+                <input type="date" id="acknowledgmentDate" name="acknowledgmentDate" required value="2023-09-01">
+            </div>
+            
+            <div class="form-group">
+                <label for="mascotAdjective" class="required">Mascot Adjective</label>
+                <input type="text" id="mascotAdjective" name="mascotAdjective" required placeholder="Enter mascot adjective" value="Brave">
+            </div>
+            
+            <div class="form-group">
+                <label for="mascotAnimal" class="required">Mascot Animal</label>
+                <input type="text" id="mascotAnimal" name="mascotAnimal" required placeholder="Enter mascot animal" value="Lion">
+            </div>
+            
+            <div class="form-group">
+                <label for="divider" class="required">Divider</label>
+                <input type="text" id="divider" name="divider" required placeholder="Enter divider symbol" value="~">
+            </div>
+            
+            <div class="form-group">
+                <label for="picture" class="required">Picture</label>
+                <input type="file" id="picture" name="picture" accept="image/*">
+                <small>Default image will be used if none is selected</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="pictureCaption" class="required">Picture Caption</label>
+                <input type="text" id="pictureCaption" name="pictureCaption" required placeholder="Enter picture caption" value="A picture of myself with a jellybean.">
+            </div>
+            
+            <div class="form-group">
+                <label for="personalStatement" class="required">Personal Statement</label>
+                <textarea id="personalStatement" name="personalStatement" required placeholder="Enter your personal statement" rows="4">Hi, I am currently a student at UNCC to pursue a Bachelor's degree in Computer Science. I became interested in this field after taking my first Computer Science course in highshool. I then decided on cybersecurity as my concentration after participating in some cybersecurity courses.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="personalBackground" class="required">Personal Background</label>
+                <textarea id="personalBackground" name="personalBackground" required placeholder="Enter personal background" rows="3">Hi, I am currently a student at UNCC to pursue a Bachelor's degree in Computer Science. I became interested in this field after taking my first Computer Science course in highshool. I then decided on cybersecurity as my concentration after participating in some cybersecurity courses.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="professionalBackground" class="required">Professional Background</label>
+                <textarea id="professionalBackground" name="professionalBackground" required placeholder="Enter professional background" rows="3">I currently work as a remote advisor with a well known tech company. Before my current position I worked as a Doordash Driver for several years.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="academicBackground" class="required">Academic Background</label>
+                <textarea id="academicBackground" name="academicBackground" required placeholder="Enter academic background" rows="3">I currently have my GED and am actively pursuing my Bachelor's degree.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="subjectBackground" class="required">Background in the Subject</label>
+                <textarea id="subjectBackground" name="subjectBackground" required placeholder="Enter background in the subject" rows="3">I have taken previous courses for cybersecurity related topics, Python, Java, C#, and C. I also have previous experience with HTML5, CSS, Javascript, and PHP.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="computerPlatform" class="required">Primary Computer Platform</label>
+                <input type="text" id="computerPlatform" name="computerPlatform" required placeholder="Enter primary computer platform" value="I use both MacOS and Windows.">
+            </div>
+            
+            <div class="form-group">
+                <label class="required">Courses</label>
+                <div id="courses-container">
+                    <div class="course-entry">
+                        <input type="text" name="courseDept[]" placeholder="Department" value="ITSC" required>
+                        <input type="text" name="courseNum[]" placeholder="Number" value="3146" required>
+                        <input type="text" name="courseName[]" placeholder="Name" value="Intro Oper Syst & Networking" required>
+                        <input type="text" name="courseReason[]" placeholder="Reason" value="I am taking this course because it is required to continue with my current path." required>
+                        <button type="button" class="delete-course-btn">Delete</button>
+                    </div>
+                    <div class="course-entry">
+                        <input type="text" name="courseDept[]" placeholder="Department" value="ITSC" required>
+                        <input type="text" name="courseNum[]" placeholder="Number" value="2175" required>
+                        <input type="text" name="courseName[]" placeholder="Name" value="Logic and Algorithms" required>
+                        <input type="text" name="courseReason[]" placeholder="Reason" value="I am taking this course because it is required to unlock additional classes for my major." required>
+                        <button type="button" class="delete-course-btn">Delete</button>
+                    </div>
+                    <div class="course-entry">
+                        <input type="text" name="courseDept[]" placeholder="Department" value="ITIS" required>
+                        <input type="text" name="courseNum[]" placeholder="Number" value="3135" required>
+                        <input type="text" name="courseName[]" placeholder="Name" value="Front-End Web App Development" required>
+                        <input type="text" name="courseReason[]" placeholder="Reason" value="I am taking this class because it is an elective that fulfills a credit requirement." required>
+                        <button type="button" class="delete-course-btn">Delete</button>
+                    </div>
+                    <div class="course-entry">
+                        <input type="text" name="courseDept[]" placeholder="Department" value="ITSC" required>
+                        <input type="text" name="courseNum[]" placeholder="Number" value="3688" required>
+                        <input type="text" name="courseName[]" placeholder="Name" value="Computers and Their Impact on Society" required>
+                        <input type="text" name="courseReason[]" placeholder="Reason" value="I am taking this class because it is an elective that fulfills a credit requirement." required>
+                        <button type="button" class="delete-course-btn">Delete</button>
+                    </div>
+                    <div class="course-entry">
+                        <input type="text" name="courseDept[]" placeholder="Department" value="MATH" required>
+                        <input type="text" name="courseNum[]" placeholder="Number" value="2164" required>
+                        <input type="text" name="courseName[]" placeholder="Name" value="Matrices & Linear Algebra" required>
+                        <input type="text" name="courseReason[]" placeholder="Reason" value="I am taking this course because it is a part of the curriculum for my major." required>
+                        <button type="button" class="delete-course-btn">Delete</button>
+                    </div>
+                </div>
+                <button type="button" class="add-course-btn">Add Another Course</button>
+            </div>
+            
+            <div class="form-group">
+                <label for="funFacts" class="required">Fun Facts About Me</label>
+                <textarea id="funFacts" name="funFacts" required placeholder="Enter fun facts about yourself" rows="3">I like to go the the gym. I like to go hiking.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="quote" class="required">Favorite Quote</label>
+                <textarea id="quote" name="quote" required placeholder="Enter your favorite quote" rows="2">Waffles are better than pancakes.</textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="quoteAuthor">Quote Author (optional)</label>
+                <input type="text" id="quoteAuthor" name="quoteAuthor" placeholder="Enter quote author (optional)">
+            </div>
+            
+            <div class="form-group">
+                <label for="funnyThing">Funny Thing (optional)</label>
+                <textarea id="funnyThing" name="funnyThing" placeholder="Enter something funny (optional)" rows="2"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="shareThing">Something I'd like to share (optional)</label>
+                <textarea id="shareThing" name="shareThing" placeholder="Enter something you'd like to share (optional)" rows="2"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="link1" class="required">Link 1</label>
+                <input type="url" id="link1" name="link1" required placeholder="Enter URL for link 1" value="https://www.linkedin.com/in/sumanth">
+            </div>
+            
+            <div class="form-group">
+                <label for="link2" class="required">Link 2</label>
+                <input type="url" id="link2" name="link2" required placeholder="Enter URL for link 2" value="https://github.com/sumanth">
+            </div>
+            
+            <div class="form-group">
+                <label for="link3" class="required">Link 3</label>
+                <input type="url" id="link3" name="link3" required placeholder="Enter URL for link 3" value="https://www.freecodecamp.org/sumanth">
+            </div>
+            
+            <div class="form-group">
+                <label for="link4" class="required">Link 4</label>
+                <input type="url" id="link4" name="link4" required placeholder="Enter URL for link 4" value="https://www.codewars.com/users/sumanth">
+            </div>
+            
+            <div class="form-group">
+                <label for="link5" class="required">Link 5</label>
+                <input type="url" id="link5" name="link5" required placeholder="Enter URL for link 5" value="https://webpages.charlotte.edu/ssumanth/">
+            </div>
+            
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clear-btn">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="result-section hidden" id="result-section">
+        <span class="reset-link" id="reset-link">Reset Form</span>
+    </div>
+
+    <div data-include="../components/footer.html"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const coursesContainer = document.getElementById('courses-container');
+            const addCourseBtn = document.querySelector('.add-course-btn');
+            
+            addCourseBtn.addEventListener('click', function() {
+                const courseEntry = document.createElement('div');
+                courseEntry.className = 'course-entry';
+                courseEntry.innerHTML = `
+                    <input type="text" name="courseDept[]" placeholder="Department" required>
+                    <input type="text" name="courseNum[]" placeholder="Number" required>
+                    <input type="text" name="courseName[]" placeholder="Name" required>
+                    <input type="text" name="courseReason[]" placeholder="Reason" required>
+                    <button type="button" class="delete-course-btn">Delete</button>
+                `;
+                coursesContainer.appendChild(courseEntry);
+                
+                courseEntry.querySelector('.delete-course-btn').addEventListener('click', function() {
+                    coursesContainer.removeChild(courseEntry);
+                });
+            });
+            
+            document.querySelectorAll('.delete-course-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    coursesContainer.removeChild(this.parentElement);
+                });
+            });
+            
+            document.getElementById('clear-btn').addEventListener('click', function() {
+                document.querySelectorAll('form input, form textarea').forEach(input => {
+                    input.value = '';
+                });
+            });
+            
+            const form = document.getElementById('introduction-form');
+            const formSection = document.getElementById('form-section');
+            const resultSection = document.getElementById('result-section');
+            const resetLink = document.getElementById('reset-link');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const requiredFields = form.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = 'red';
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                
+                if (!isValid) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                
+                generateResultPage();
+                
+                formSection.classList.add('hidden');
+                resultSection.classList.remove('hidden');
+            });
+            
+            resetLink.addEventListener('click', function() {
+                resultSection.classList.add('hidden');
+                formSection.classList.remove('hidden');
+                resultSection.innerHTML = '<span class="reset-link" id="reset-link">Reset Form</span>';
+                document.getElementById('reset-link').addEventListener('click', resetLink.click);
+            });
+            
+            function generateResultPage() {
+                const formData = new FormData(form);
+                
+                const courseDepts = formData.getAll('courseDept[]');
+                const courseNums = formData.getAll('courseNum[]');
+                const courseNames = formData.getAll('courseName[]');
+                const courseReasons = formData.getAll('courseReason[]');
+                
+                const courses = [];
+                for (let i = 0; i < courseDepts.length; i++) {
+                    courses.push({
+                        dept: courseDepts[i],
+                        num: courseNums[i],
+                        name: courseNames[i],
+                        reason: courseReasons[i]
+                    });
+                }
+                
+                let imageSrc = '../images/me.png'; 
+                const pictureFile = document.getElementById('picture').files[0];
+                if (pictureFile) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('result-image').src = e.target.result;
+                    };
+                    reader.readAsDataURL(pictureFile);
+                }
+                
+                let resultHTML = `
+                    <div class="aboutMeSection">
+                        <figure>
+                            <img id="result-image" alt="picture of me" src="${imageSrc}">
+                            <figcaption>${formData.get('pictureCaption')}</figcaption>
+                        </figure>
+                        
+                        <h3 class="aboutHeaders"><strong>Personal Background:</strong></h3>
+                        <p>${formData.get('personalBackground')}</p>
+                        <br><br>
+                        
+                        <h3 class="aboutHeaders"><strong>Professional Background:</strong></h3>
+                        <p>${formData.get('professionalBackground')}</p>
+                        <br><br>
+                        
+                        <h3 class="aboutHeaders"><strong>Academic Background:</strong></h3>
+                        <p>${formData.get('academicBackground')}</p>
+                        <br><br>
+                        
+                        <h3 class="aboutHeaders"><strong>Background in the Subject:</strong></h3>
+                        <p>${formData.get('subjectBackground')}</p>
+                        <br>
+                        
+                        <h3 class="aboutHeaders"><strong>Primary Computer Platform:</strong></h3>
+                        <p>${formData.get('computerPlatform')}</p>
+                        <br>
+                        
+                        <h3 class="aboutHeaders"><strong>Courses that I am taking &amp; why:</strong></h3>
+                `;
+                
+                courses.forEach(course => {
+                    resultHTML += `
+                        <p><i><strong>${course.dept} ${course.num} - ${course.name}:</strong></i><br>
+                        ${course.reason}<br>
+                        </p>
+                        <br>
+                    `;
+                });
+                
+                resultHTML += `
+                        <h3 class="aboutHeaders"><strong>Fun Facts About Me:</strong></h3>
+                        <p>${formData.get('funFacts')}</p>
+                        
+                        <h3 class="aboutHeaders"><strong>I'd also like to share:</strong></h3>
+                        <p>${formData.get('quote')}<br></p>
+                    </div>
+                    <br><br><br><br><br>
+                    <span class="reset-link" id="reset-link">Reset Form</span>
+                `;
+                
+                resultSection.innerHTML = resultHTML;
+                
+                document.getElementById('reset-link').addEventListener('click', function() {
+                    resultSection.classList.add('hidden');
+                    formSection.classList.remove('hidden');
+                    resultSection.innerHTML = '<span class="reset-link" id="reset-link">Reset Form</span>';
+                    document.getElementById('reset-link').addEventListener('click', resetLink.click);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
