@@ -4,18 +4,49 @@
     <meta charset="utf-8">
     <meta name="description" content="Introduction Form">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styling/default.css?v=0.05">
     <title>Introduction Form</title>
-    <script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+        
         .form-section {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            border-radius: 5px;
         }
         
         .form-group {
             margin-bottom: 20px;
+            width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
         
         label {
@@ -31,6 +62,12 @@
             border-radius: 4px;
             font-family: inherit;
             font-size: inherit;
+            max-width: 100%;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
         }
         
         .required::after {
@@ -40,6 +77,7 @@
         
         .course-entry {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 10px;
             align-items: center;
@@ -47,12 +85,14 @@
         
         .course-entry input {
             flex: 1;
+            min-width: 150px;
         }
         
         .button-group {
             display: flex;
             gap: 10px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         
         button {
@@ -61,6 +101,8 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            flex: 1;
+            min-width: 120px;
         }
         
         button[type="submit"] {
@@ -73,7 +115,7 @@
             color: white;
         }
         
-        button[type="clear"] {
+        button[type="button"] {
             background-color: #2196F3;
             color: white;
         }
@@ -88,6 +130,7 @@
             background-color: #f44336;
             color: white;
             padding: 5px 10px;
+            flex: 0 0 auto;
         }
         
         .hidden {
@@ -95,9 +138,13 @@
         }
         
         .result-section {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            border-radius: 5px;
         }
         
         .reset-link {
@@ -108,6 +155,73 @@
             text-decoration: underline;
             cursor: pointer;
         }
+        
+        /* About me section styles */
+        .aboutMeSection {
+            width: 100%;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+        
+        .aboutMeSection figure {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .aboutMeSection img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .aboutMeSection figcaption {
+            font-style: italic;
+            margin-top: 5px;
+        }
+        
+        .aboutHeaders {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .aboutMeSection p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            width: 100%;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+        
+        /* Footer styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .course-entry {
+                flex-direction: column;
+            }
+            
+            .course-entry input {
+                width: 100%;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -115,7 +229,6 @@
         <div id="rootTop">
             <h1>Introduction Form</h1>
         </div>
-        <div data-include="../components/header.html"></div>
     </header>
 
     <div class="form-section" id="form-section">
@@ -179,27 +292,27 @@
             
             <div class="form-group">
                 <label for="personalStatement" class="required">Personal Statement</label>
-                <textarea id="personalStatement" name="personalStatement" required placeholder="Enter your personal statement" rows="4">Hi, I am currently a student at UNCC to pursue a Bachelor's degree in Computer Science. I became interested in this field after taking my first Computer Science course in highshool. I then decided on cybersecurity as my concentration after participating in some cybersecurity courses.</textarea>
+                <textarea id="personalStatement" name="personalStatement" required placeholder="Enter your personal statement">Hi, I am currently a student at UNCC to pursue a Bachelor's degree in Computer Science. I became interested in this field after taking my first Computer Science course in highshool. I then decided on cybersecurity as my concentration after participating in some cybersecurity courses.</textarea>
             </div>
             
             <div class="form-group">
                 <label for="personalBackground" class="required">Personal Background</label>
-                <textarea id="personalBackground" name="personalBackground" required placeholder="Enter personal background" rows="3">Hi, I am currently a student at UNCC to pursue a Bachelor's degree in Computer Science. I became interested in this field after taking my first Computer Science course in highshool. I then decided on cybersecurity as my concentration after participating in some cybersecurity courses.</textarea>
+                <textarea id="personalBackground" name="personalBackground" required placeholder="Enter personal background">Hi, I am currently a student at UNCC to pursue a Bachelor's degree in Computer Science. I became interested in this field after taking my first Computer Science course in highshool. I then decided on cybersecurity as my concentration after participating in some cybersecurity courses.</textarea>
             </div>
             
             <div class="form-group">
                 <label for="professionalBackground" class="required">Professional Background</label>
-                <textarea id="professionalBackground" name="professionalBackground" required placeholder="Enter professional background" rows="3">I currently work as a remote advisor with a well known tech company. Before my current position I worked as a Doordash Driver for several years.</textarea>
+                <textarea id="professionalBackground" name="professionalBackground" required placeholder="Enter professional background">I currently work as a remote advisor with a well known tech company. Before my current position I worked as a Doordash Driver for several years.</textarea>
             </div>
             
             <div class="form-group">
                 <label for="academicBackground" class="required">Academic Background</label>
-                <textarea id="academicBackground" name="academicBackground" required placeholder="Enter academic background" rows="3">I currently have my GED and am actively pursuing my Bachelor's degree.</textarea>
+                <textarea id="academicBackground" name="academicBackground" required placeholder="Enter academic background">I currently have my GED and am actively pursuing my Bachelor's degree.</textarea>
             </div>
             
             <div class="form-group">
                 <label for="subjectBackground" class="required">Background in the Subject</label>
-                <textarea id="subjectBackground" name="subjectBackground" required placeholder="Enter background in the subject" rows="3">I have taken previous courses for cybersecurity related topics, Python, Java, C#, and C. I also have previous experience with HTML5, CSS, Javascript, and PHP.</textarea>
+                <textarea id="subjectBackground" name="subjectBackground" required placeholder="Enter background in the subject">I have taken previous courses for cybersecurity related topics, Python, Java, C#, and C. I also have previous experience with HTML5, CSS, Javascript, and PHP.</textarea>
             </div>
             
             <div class="form-group">
@@ -251,12 +364,12 @@
             
             <div class="form-group">
                 <label for="funFacts" class="required">Fun Facts About Me</label>
-                <textarea id="funFacts" name="funFacts" required placeholder="Enter fun facts about yourself" rows="3">I like to go the the gym. I like to go hiking.</textarea>
+                <textarea id="funFacts" name="funFacts" required placeholder="Enter fun facts about yourself">I like to go the the gym. I like to go hiking.</textarea>
             </div>
             
             <div class="form-group">
                 <label for="quote" class="required">Favorite Quote</label>
-                <textarea id="quote" name="quote" required placeholder="Enter your favorite quote" rows="2">Waffles are better than pancakes.</textarea>
+                <textarea id="quote" name="quote" required placeholder="Enter your favorite quote">Waffles are better than pancakes.</textarea>
             </div>
             
             <div class="form-group">
@@ -266,12 +379,12 @@
             
             <div class="form-group">
                 <label for="funnyThing">Funny Thing (optional)</label>
-                <textarea id="funnyThing" name="funnyThing" placeholder="Enter something funny (optional)" rows="2"></textarea>
+                <textarea id="funnyThing" name="funnyThing" placeholder="Enter something funny (optional)"></textarea>
             </div>
             
             <div class="form-group">
                 <label for="shareThing">Something I'd like to share (optional)</label>
-                <textarea id="shareThing" name="shareThing" placeholder="Enter something you'd like to share (optional)" rows="2"></textarea>
+                <textarea id="shareThing" name="shareThing" placeholder="Enter something you'd like to share (optional)"></textarea>
             </div>
             
             <div class="form-group">
@@ -311,7 +424,9 @@
         <span class="reset-link" id="reset-link">Reset Form</span>
     </div>
 
-    <div data-include="../components/footer.html"></div>
+    <footer>
+        <p>© 2023 Introduction Form</p>
+    </footer>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -403,7 +518,7 @@
                     });
                 }
                 
-                let imageSrc = '../images/me.png'; 
+                let imageSrc = 'https://via.placeholder.com/300x300?text=Your+Image'; // Default image
                 const pictureFile = document.getElementById('picture').files[0];
                 if (pictureFile) {
                     const reader = new FileReader();
