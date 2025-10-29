@@ -97,7 +97,7 @@ function generateJSONOutput() {
     // Create result HTML with syntax highlighting
     const resultHTML = `
         <div class="json-output">
-            <h3>Introduction Data in JSON Format</h3>
+            <h3 class="json-output-header">Introduction Data in JSON Format</h3>
             <p>You can highlight and copy the JSON below:</p>
             <pre><code class="language-json" id="json-code">${jsonString}</code></pre>
         </div>
