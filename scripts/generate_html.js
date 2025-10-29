@@ -127,7 +127,7 @@ function generateHTMLOutput() {
     
     const resultHTML = `
         <div class="html-output">
-            <h3>Introduction Data in HTML Format</h3>
+            <h3 class="html-output-header">Introduction Data in HTML Format</h3>
             <p>You can highlight and copy the HTML below:</p>
             <pre><code class="language-html" id="html-code">${escapedHTML}</code></pre>
         </div>
