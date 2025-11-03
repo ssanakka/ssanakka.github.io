@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCollab - Gallery</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>CodeCollab</h1>
+            <p class="tagline">Learn. Code. Collaborate.</p>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="groups.html">Study Groups</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Project Gallery</h2>
+            <p>Showcase of amazing projects created by UNCC students</p>
+        </section>
+
+        <section class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="data">Data Science</button>
+        </section>
+
+        <section class="gallery-grid">
+            <div class="project-card" data-category="web">
+                <img src="../images/project1.jpg" alt="E-commerce Website" width="300">
+                <div class="project-info">
+                    <h3>UNCC Marketplace</h3>
+                    <p class="student">By: Sarah Johnson</p>
+                    <p class="description">A full-stack e-commerce platform for student sales</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <img src="../images/project2.jpg" alt="Fitness App" width="300">
+                <div class="project-info">
+                    <h3>FitTrack Mobile</h3>
+                    <p class="student">By: Mike Chen</p>
+                    <p class="description">Cross-platform fitness tracking application</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-category="data">
+                <img src="../images/project3.jpg" alt="Data Visualization" width="300">
+                <div class="project-info">
+                    <h3>Climate Data Analyzer</h3>
+                    <p class="student">By: Emily Rodriguez</p>
+                    <p class="description">Interactive visualization of global climate patterns</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CodeCollab Learning Platform. All rights reserved.</p>
+            <p>UNCC College of Computing and Informatics</p>
+            <div class="validation">
+                <a href="https://validator.w3.org/check?uri=referer" target="_blank">HTML Validation</a> |
+                <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS Validation</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
