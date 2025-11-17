@@ -192,11 +192,8 @@ ul {
     line-height: 1.6;
 }
 
-.crap-list {
-    margin-left: 20px;
-}
-
 .crap-list li {
+    margin-left: -35px;
     margin-bottom: 10px;
     line-height: 1.5;
 }
