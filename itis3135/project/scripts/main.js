@@ -147,3 +147,80 @@ startExerciseButtons.forEach(button => {
         alert(`Starting exercise: ${exerciseName}\nInteractive code editor loading...`);
     });
 });
+
+
+
+// CTA button click counter
+document.addEventListener('DOMContentLoaded', function() {
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        let clickCount = 0;
+        ctaButton.addEventListener('click', function() {
+            clickCount++;
+            alert(`Get Started clicked! Total clicks: ${clickCount}`);
+        });
+    }
+});
+
+
+
+// Gallery filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (filterButtons.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                // Show/hide projects based on filter
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+});
+
+
+
+
+// Animated stats counter
+document.addEventListener('DOMContentLoaded', function() {
+    const statItems = document.querySelectorAll('.stat-item h4');
+    
+    if (statItems.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    statItems.forEach(stat => {
+                        const target = parseInt(stat.textContent);
+                        let current = 0;
+                        const increment = target / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            stat.textContent = Math.floor(current) + '+';
+                        }, 25);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        
+        observer.observe(document.querySelector('.stats'));
+    }
+});
